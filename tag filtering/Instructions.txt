@@ -1,0 +1,16 @@
+Just put .txt files in to input tags
+launch .bat file
+take your tags in output folder
+Tags that are listed in unwanted_tags.txt will be removed from prompt, feel free to add and remove any you want
+Repeating tags like "shirt" and "white shirt" will be filtered, and simpler variations will be removed. Similar complexity and varied tags will not be touched.
+
+It will not take care of duplicate tags.
+It it supposed to work with underscores in unwanted tags, but i don't think i did it same way for input, so, replace all underscores with space in Dataset tag editor first just in case.
+
+
+--------NEW--------
+Wanted tags
+Launch wanted tags, and ONLY tags specified in respective text files will be left in your dataset.
+
+
+Please, backup yout text files in case anything goes wrong.
