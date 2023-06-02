@@ -20,6 +20,8 @@ If you have shirt and white shirt in the same image, it will remove shirt tag, a
 
 Keep in mind that Mode(2) is always on, and will be working alongside tag remove in modes 0 and 1.
 
+Just use relevant .bat file to launch one or other mode.
+
 ## Half-assed color-theme tagger
 *Future
 
