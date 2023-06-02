@@ -20,6 +20,11 @@ If you have shirt and white shirt in the same image, it will remove shirt tag, a
 
 Keep in mind that Mode(2) is always on, and will be working alongside tag remove in modes 0 and 1.
 
+## Half-assed color-theme tagger
+*Future
+
+## Semi-reliable Complexity Tagger
+*Future
 
 ## Suggestions
 If you have any ideas for processing to get useful tags reeliably, please share, and i'll try to implement that tool.
