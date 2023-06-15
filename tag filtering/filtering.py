@@ -7,9 +7,9 @@ while userinput0 not in [0,1,2]:
    userinput0 = float(input("please, enter a valid option number: "))
 
 if userinput0 == 0:
-    wanted_tags_file = "./wanted_tags.txt"
+    wanted_tags_file = "./unwanted_tags.txt"
 elif userinput0 == 1:
-    wanted_tags_file = "./wanted_tags_2.txt"
+    wanted_tags_file = "./unwanted_tags_2.txt"
 elif userinput0 == 2:
     wanted_tags_file = "./unwanted_zero.txt"
 
