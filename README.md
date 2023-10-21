@@ -3,7 +3,9 @@ Tools i've created(likely all of them will be with GPT4 usage) for processing an
 ## Tag Filtering v2  
 Uses roughly 780k tags from Danbooru, split in to 5 different lists, which you can choose to, or not to, delete.  
 Utilizes 3 stages of filtering, main filtering, removing tags that are in huge lists, additional filtering, which does pass with v1 tag list, and outliers removal, which let you choose to get rid of tags that are not present in any of those lists. This helps to reduce unwanted tags to minimum, and saves your sanity.  
-TAG FILES ARE NOT INCLUDED, AS THEY CURRENTLY CONTAIN LINKS, WHICH GITHUB WOULD NOT LIKE, FROM WHAT I CAN TELL, PLEASE, DOWNLOAD THEM FROM CIVITAI ARCHIVE - https://civitai.com/models/99328/tag-filtering-v1v2
+TAG FILES ARE NOT INCLUDED, AS THEY CURRENTLY CONTAIN LINKS, WHICH GITHUB WOULD NOT LIKE, FROM WHAT I CAN TELL, PLEASE, DOWNLOAD THEM FROM CIVITAI ARCHIVE - https://civitai.com/models/99328/tag-filtering-v1v2  
+#### Changelog  
+v2.5 - drastic performance increase due to utilization of sets instead of lists(thanks random guy from Civitai for suggesting that).  
 ## Tag Filtering
 It uses WD1.4 Tagger list of tags(~11k tags) that i went through and removed tags i think are not important. You will likely disagree, and for that i've included referance tag list for you to go over them yourself. Feel free to request pulls with your own versions.
 I will especially appreciate if someone will go over full Danbooru tag list from DeepDanbooru tagger(over 100k tags).
