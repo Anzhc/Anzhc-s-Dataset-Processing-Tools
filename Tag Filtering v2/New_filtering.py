@@ -11,7 +11,7 @@ def user_selection(prompt, valid_options):
 def read_unwanted_tags(file_path):
     with open(file_path, "r", encoding="utf-8") as file:
         unwanted_tags = [tag.strip().replace("_", " ") for tag in file]
-    return unwanted_tags
+    return set(unwanted_tags)  # Convert list to set
 
 
 def remove_unwanted_tags(tags, unwanted_tags):
@@ -63,21 +63,19 @@ def process_tags_files(input_folder, output_folder, unwanted_tags):
     print("Done.")
 
 def check_tags_in_lists(input_folder, tag_files):
-    all_tags = []
-    for tag_file in tag_files.values():  # loop through all tag files
+    all_tags = set()  # Initialize as set
+    for tag_file in tag_files.values():
         with open(tag_file, "r", encoding="utf-8") as file:
-            all_tags += [tag.strip().replace("_", " ") for tag in file]
+            all_tags.update({tag.strip().replace("_", " ") for tag in file})
 
-    tags_not_in_list = []
+    tags_not_in_list = set()  # Initialize as set
     for file_name in os.listdir(input_folder):
         if file_name.endswith(".txt"):
             with open(os.path.join(input_folder, file_name), "r", encoding="utf-8") as file:
-                tags = [tag.strip().replace("_", " ") for tag in file.read().split(",")]
-                for tag in tags:
-                    if tag not in all_tags:
-                        tags_not_in_list.append(tag)
+                tags = {tag.strip().replace("_", " ") for tag in file.read().split(",")}
+                tags_not_in_list.update(tags - all_tags)  # Use set difference operator
 
-    return tags_not_in_list
+    return list(tags_not_in_list)  # Convert set to list before returning
 
 if __name__ == "__main__":
     tag_groups = {
@@ -95,9 +93,9 @@ if __name__ == "__main__":
         if selection == 1:
             tag_group_selections.append(tag_groups[tag_group])
 
-    unwanted_tags = []
+    unwanted_tags = set()  # Initialize as set
     for tag_group_file in tag_group_selections:
-        unwanted_tags += read_unwanted_tags(tag_group_file)
+        unwanted_tags |= read_unwanted_tags(tag_group_file)
 
     input_folder = "./input_tags"
     output_folder = "./output_tags"
