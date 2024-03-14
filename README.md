@@ -28,6 +28,13 @@ Keep in mind that Mode(2) is always on, and will be working alongside tag remove
 
 Just use relevant .bat file to launch one or other mode.
 
+## Brightness Tagger  
+Lil script that splits images into multiple categories of brightness, with normal brightness being not tagged.  
+It does add tag at the end.  
+
+It does work quite decent from what i see, but it is yet to be seen if it has real use for particular SD models. Did not show significant change on XL so far.  
+Likely will be useful for 1.5, as it can go dark a bit, and will likely be very useful for SD3, as it confirmed can go dark.
+
 ## Half-assed color-theme tagger
 *Future
 
