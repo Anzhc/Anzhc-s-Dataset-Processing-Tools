@@ -35,6 +35,14 @@ It does add tag at the end.
 It does work quite decent from what i see, but it is yet to be seen if it has real use for particular SD models. Did not show significant change on XL so far.  
 Likely will be useful for 1.5, as it can go dark a bit, and will likely be very useful for SD3, as it confirmed can go dark.
 
+## Minify Scripts  
+Basically 2 variants of downscale scripts.  
+**IMPORTANT**: Open script and pick your own max_pixels value you want. Main by default is set to 1536x1536 value, while Lagrenge is set to 768x768.
+Main - fast and likely preferred version. Downscaled using lanczos. Seems to be more true to original.  
+LagrengeUSM - Downscales using Lagrenge and UnsharpMask. Some people like it more. Slow.  
+P.S. Scripts are multithreaded and will heavily utilize your PC whiel running. Thankfully, main version processes thousands of images quick enough.
+
+
 ## Half-assed color-theme tagger
 *Future
 
